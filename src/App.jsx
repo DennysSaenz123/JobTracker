@@ -1,4 +1,6 @@
 import { applications } from './applications';
+import SummaryStrip from './components/SummaryStrip';
+import ApplicationList from './components/ApplicationList';
 
 /**
  * The starting point. Right now it dumps the raw data on the page so you can
@@ -19,8 +21,8 @@ export default function App() {
 			</header>
 
 			<main className="container">
-				<p>{applications.length} applications loaded.</p>
-				<pre>{JSON.stringify(applications[0], null, 2)}</pre>
+				<SummaryStrip applications={applications} />
+        <ApplicationList applications={applications} />
 			</main>
 		</>
 	);
